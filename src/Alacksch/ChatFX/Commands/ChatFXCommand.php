@@ -3,6 +3,7 @@ declare(strict_types=1);
 
 namespace Alacksch\ChatFX\Commands;
 
+use Alacksch\ChatFX\ChatFX;
 use jojoe77777\FormAPI\CustomForm;
 use pocketmine\command\CommandSender;
 use pocketmine\command\PluginCommand;
@@ -17,6 +18,12 @@ class ChatFXCommand extends PluginCommand {
         $this->setDescription("ChatFX command!");
         $this->setAliases(["chatfx"]);
     }
+    public function getPlugin(): ChatFX {
+        /** @var ChatFX $plugin */
+        $plugin = parent::getPlugin();
+        return $plugin;
+    }
+
     public const DISPLAY_COLORS = [
         "§fWhite",
         "§0Black",
