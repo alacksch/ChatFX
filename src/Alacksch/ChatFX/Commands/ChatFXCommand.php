@@ -19,7 +19,7 @@ class ChatFXCommand extends PluginCommand {
         $this->setAliases(["chatfx"]);
     }
     /** @return ChatFX */
-    public function getPlugin(): ChatFX {
+    public function getPlugin(): Plugin {
         /** @var ChatFX $plugin */
         $plugin = parent::getPlugin();
         return $plugin;
