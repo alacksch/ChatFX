@@ -69,6 +69,7 @@ class ChatFXCommand extends PluginCommand {
                 return true;
             }
             $color = self::DISPLAY_COLORS[$data[1]];
+            /** @var ChatFX|null $plugin */
             $this->getPlugin()->CFXUsers[$player->getName()] = self::FORMATTED_COLORS[$data[1]];
             $player->sendMessage(TextFormat::YELLOW . 'Your chat color has been set to ' . $color);
             return true;
