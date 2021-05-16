@@ -11,6 +11,25 @@ ChatFX is a plugin for Pocketmine-MP to let players who are given the permission
 ## Contributing
 You may open issues with suggestions, I also appreciate feedback on the project, it is my first one to put out on for public, hopefully it's useful!
 
+## Color suported:
+- White
+- Black
+- Dark Blue
+- Dark Green
+- Dark Aqua
+- Dark Red
+- Dark Purple
+- Gold
+- Gray
+- Dark Gray
+- Blue
+- Green
+- Aqua
+- Red
+- Light Purple
+- Yellow
+- Rainbow (Soon!)
+
 ## What the plugin does in pictures
 ![Image](https://i.imgur.com/I9z5mZ7_d.webp?maxwidth=760&fidelity=grand)
 ![Image](https://i.imgur.com/FXbeCz1_d.webp?maxwidth=760&fidelity=grand)
