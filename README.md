@@ -29,7 +29,7 @@ You may open issues with suggestions, I also appreciate feedback on the project,
 - Red
 - Light Purple
 - Yellow
-- Rainbow (Soon!)
+- Rainbow (Implemented :eyes:!)
 
 ## What the plugin does in pictures
 ![Image](https://i.imgur.com/I9z5mZ7_d.webp?maxwidth=760&fidelity=grand)

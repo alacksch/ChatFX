@@ -40,7 +40,8 @@ class ChatFXCommand extends PluginCommand {
         "§bAqua",
         "§cRed",
         "§dLight Purple",
-        "§eYellow"
+        "§eYellow",
+        "§cR§e§ba§6i§an§db§co§6w"
     ];
     public const FORMATTED_COLORS = [
         TextFormat::WHITE,
@@ -58,7 +59,8 @@ class ChatFXCommand extends PluginCommand {
         TextFormat::AQUA,
         TextFormat::RED,
         TextFormat::LIGHT_PURPLE,
-        TextFormat::YELLOW
+        TextFormat::YELLOW,
+        "Rainbow"
     ];
     public function ListColorsDropdown(): array {
         return array_values(self::DISPLAY_COLORS);
