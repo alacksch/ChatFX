@@ -3,7 +3,6 @@ declare(strict_types=1);
 
 namespace Alacksch\ChatFX\Commands;
 
-use Alacksch\ChatFX\ChatFX;
 use jojoe77777\FormAPI\CustomForm;
 use pocketmine\command\CommandSender;
 use pocketmine\command\PluginCommand;
@@ -17,11 +16,6 @@ class ChatFXCommand extends PluginCommand {
         $this->setPermission("chatfx.cfx");
         $this->setDescription("ChatFX command!");
         $this->setAliases(["chatfx"]);
-    }
-    public function getPlugin(): ChatFX {
-        /** @var ChatFX $plugin */
-        $plugin = parent::getPlugin();
-        return $plugin;
     }
     public const DISPLAY_COLORS = [
         "§fWhite",
@@ -68,8 +62,7 @@ class ChatFXCommand extends PluginCommand {
                 return true;
             }
             $color = self::DISPLAY_COLORS[$data[1]];
-            /** @var ChatFX|null $plugin */
-            $this->$plugin->CFXUsers[$player->getName()] = self::FORMATTED_COLORS[$data[1]];
+            $this->getPlugin()->CFXUsers[$player->getName()] = self::FORMATTED_COLORS[$data[1]];
             $player->sendMessage(TextFormat::YELLOW . 'Your chat color has been set to ' . $color);
             return true;
         });
