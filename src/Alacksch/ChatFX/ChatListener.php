@@ -4,9 +4,6 @@ namespace Alacksch\ChatFX;
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerChatEvent;
 
-/**
- * @property ChatFX plugin
- */
 class ChatListener implements Listener {
     public function getPlugin(): ChatFX {
         return $this->plugin;

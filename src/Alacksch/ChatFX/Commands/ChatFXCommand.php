@@ -3,16 +3,13 @@ declare(strict_types=1);
 
 namespace Alacksch\ChatFX\Commands;
 
-use Alacksch\ChatFX\ChatFX;
 use jojoe77777\FormAPI\CustomForm;
 use pocketmine\command\CommandSender;
 use pocketmine\command\PluginCommand;
 use pocketmine\Player;
 use pocketmine\plugin\Plugin;
 use pocketmine\utils\TextFormat;
-/**
- * @property ChatFX plugin
- */
+
 class ChatFXCommand extends PluginCommand {
     public function __construct(Plugin $plugin) {
         parent::__construct("cfx", $plugin);
