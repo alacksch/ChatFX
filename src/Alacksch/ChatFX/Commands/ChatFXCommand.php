@@ -18,10 +18,10 @@ class ChatFXCommand extends PluginCommand {
         $this->setDescription("ChatFX command!");
         $this->setAliases(["chatfx"]);
     }
-    public function getPlugin(): ChatFX {
+    public function getPlugin(): Plugin
+    {
         /** @var ChatFX $plugin */
-        $plugin = parent::getPlugin();
-        return $plugin;
+        return parent::getPlugin();
     }
 
     public const DISPLAY_COLORS = [
@@ -69,7 +69,6 @@ class ChatFXCommand extends PluginCommand {
                 return true;
             }
             $color = self::DISPLAY_COLORS[$data[1]];
-            /** @var ChatFX|null $plugin */
             $this->getPlugin()->CFXUsers[$player->getName()] = self::FORMATTED_COLORS[$data[1]];
             $player->sendMessage(TextFormat::YELLOW . 'Your chat color has been set to ' . $color);
             return true;
