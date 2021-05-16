@@ -74,7 +74,7 @@ class ChatFXCommand extends PluginCommand {
             return true;
         });
         $form->setTitle('§cChat§eFX settings');
-        $form->addLabel('You may use "None" to reset your chat color.');
+        $form->addLabel('You may use "White" to reset your chat color to default.');
         $form->addDropdown('Colors', $this->ListColorsDropdown());
         $player->sendForm($form);
     }
