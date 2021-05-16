@@ -18,6 +18,11 @@ class ChatFXCommand extends PluginCommand {
         $this->setDescription("ChatFX command!");
         $this->setAliases(["chatfx"]);
     }
+    public function getPlugin(): ChatFX {
+        /** @var ChatFX $plugin */
+        $plugin = parent::getPlugin();
+        return $plugin;
+    }
     public const DISPLAY_COLORS = [
         "§fWhite",
         "§0Black",
