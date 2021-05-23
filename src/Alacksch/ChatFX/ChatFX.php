@@ -29,7 +29,7 @@ class ChatFX extends PluginBase {
         TextFormat::YELLOW
     ];
     public function onEnable() {
-        $this->getServer()->getCommandMap()->register("cfx", new ChatFXCommand($this));
+        $this->getServer()->getCommandMap()->register("ChatFX", new ChatFXCommand($this));
         $this->getServer()->getPluginManager()->registerEvents(new ChatListener($this), $this);
     }
     public function Rainbow(string $message): string {
