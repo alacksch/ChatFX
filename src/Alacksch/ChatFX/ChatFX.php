@@ -9,8 +9,8 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
 
 class ChatFX extends PluginBase {
-    public array $CFXUsers = [];
-    public array $colors = [
+    public $CFXUsers = [];
+    public $colors = [
         TextFormat::WHITE,
         TextFormat::BLACK,
         TextFormat::DARK_BLUE,
@@ -29,7 +29,7 @@ class ChatFX extends PluginBase {
         TextFormat::YELLOW
     ];
     public function onEnable() {
-        $this->getServer()->getCommandMap()->register("cfx", new ChatFXCommand($this));
+        $this->getServer()->getCommandMap()->register("ChatFX", new ChatFXCommand($this));
         $this->getServer()->getPluginManager()->registerEvents(new ChatListener($this), $this);
     }
     public function Rainbow(string $message): string {
