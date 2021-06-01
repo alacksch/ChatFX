@@ -8,14 +8,24 @@ class ChatListener implements Listener {
     public function getPlugin(): ChatFX {
         return $this->plugin;
     }
+
     public ChatFX $plugin;
+
     public function __construct(ChatFX $plugin) {
         $this->plugin = $plugin;
     }
-    public function onChat(PlayerChatEvent $event) {
+
+    public function onChat(PlayerChatEvent $event)
+    {
         if (isset($this->getPlugin()->CFXUsers[$event->getPlayer()->getName()])) {
+            if ($this->getPlugin()->CFXUsers[$event->getPlayer()->getName()] === "Rainbow") {
+                $message = $this->getPlugin()->Rainbow($event->getMessage());
+                $event->setMessage($message);
+                $event->setMessage($this->getPlugin()->Rainbow($event->getMessage()));
+            } else {
                 $color = $this->getPlugin()->CFXUsers[$event->getPlayer()->getName()];
                 $event->setMessage($color . $event->getMessage());
+            }
         }
     }
 }
