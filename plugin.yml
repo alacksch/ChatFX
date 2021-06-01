@@ -3,4 +3,6 @@ name: ChatFX
 version: 0.0.1
 main: Alacksch\ChatFX\ChatFX
 api: 3.19.0
+extensions:
+  Core: '>=7.4'
 ...

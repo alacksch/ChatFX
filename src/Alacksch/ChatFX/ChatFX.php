@@ -9,8 +9,8 @@ use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
 
 class ChatFX extends PluginBase {
-    public $CFXUsers = [];
-    public $colors = [
+    public array $CFXUsers = [];
+    public array $colors = [
         TextFormat::WHITE,
         TextFormat::BLACK,
         TextFormat::DARK_BLUE,
