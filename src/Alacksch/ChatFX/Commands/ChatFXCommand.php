@@ -21,7 +21,8 @@ class ChatFXCommand extends PluginCommand {
     /** @return ChatFX */
     public function getPlugin(): Plugin {
         /** @var ChatFX $plugin */
-        return parent::getPlugin();
+        $plugin = parent::getPlugin();
+        return $plugin;
     }
     public const DISPLAY_COLORS = [
         "§fWhite",
