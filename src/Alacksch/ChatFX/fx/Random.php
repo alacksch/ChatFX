@@ -29,7 +29,7 @@ class Random extends FX
 				$message .= $letter;
 			} else {
 				$color = $this->colors[array_rand($this->colors)];
-				$message .= $color . $letter;
+                $message .= $color . $letter;
 			}
 		}
 		return $message;

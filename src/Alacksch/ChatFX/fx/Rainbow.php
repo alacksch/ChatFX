@@ -37,7 +37,7 @@ class Rainbow extends FX
 				$message .= $letter;
 			} else {
 				$color = self::COLORS[$i % count(self::COLORS)];
-				$message .= $color . $letter;
+                $message .= $color . $letter;
 			}
 		}
 		return $message;
