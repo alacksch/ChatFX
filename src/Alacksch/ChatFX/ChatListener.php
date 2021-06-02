@@ -7,12 +7,12 @@ use pocketmine\event\player\PlayerChatEvent;
 
 class ChatListener implements Listener
 {
+	public ChatFX $plugin;
+
 	public function getPlugin(): ChatFX
 	{
 		return $this->plugin;
 	}
-
-	public ChatFX $plugin;
 
 	public function __construct(ChatFX $plugin)
 	{

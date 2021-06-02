@@ -9,10 +9,12 @@ use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
 use pocketmine\plugin\Plugin;
 use pocketmine\utils\TextFormat;
+use pocketmine\Player;
 
 class ChatFXCommand extends Command
 {
-	public Plugin $plugin;
+	/** @var Plugin|ChatFX */
+	public $plugin;
 
 	public function __construct(Plugin $plugin)
 	{
@@ -24,7 +26,7 @@ class ChatFXCommand extends Command
 	/**
 	 * @return ChatFX
 	 */
-	public function getPlugin(): Plugin
+	public function getPlugin(): ChatFX
 	{
 		return $this->plugin;
 	}

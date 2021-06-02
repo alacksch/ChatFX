@@ -5,6 +5,7 @@ declare(strict_types=1);
 namespace Alacksch\ChatFX\fx;
 
 use pocketmine\utils\TextFormat;
+use pocketmine\Player;
 
 //Applies a random color of a set of colors
 class Random extends FX

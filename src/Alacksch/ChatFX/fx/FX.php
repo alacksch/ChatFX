@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Alacksch\ChatFX\fx;
 
+use pocketmine\Player;
+
 abstract class FX
 {
 	private string $id;
