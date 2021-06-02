@@ -1,29 +1,31 @@
 <?php
+
 namespace Alacksch\ChatFX;
 
 use pocketmine\event\Listener;
 use pocketmine\event\player\PlayerChatEvent;
 
-class ChatListener implements Listener {
-    public function getPlugin(): ChatFX {
-        return $this->plugin;
-    }
+class ChatListener implements Listener
+{
+	public ChatFX $plugin;
 
-    public ChatFX $plugin;
+	public function getPlugin(): ChatFX
+	{
+		return $this->plugin;
+	}
 
-    public function __construct(ChatFX $plugin) {
-        $this->plugin = $plugin;
-    }
+	public function __construct(ChatFX $plugin)
+	{
+		$this->plugin = $plugin;
+	}
 
-    public function onChat(PlayerChatEvent $event)
-    {
-        if (isset($this->getPlugin()->CFXUsers[$event->getPlayer()->getName()])) {
-            if ($this->getPlugin()->CFXUsers[$event->getPlayer()->getName()] === "Rainbow") {
-                $event->setMessage($this->getPlugin()->Rainbow($event->getMessage()));
-            } else {
-                $color = $this->getPlugin()->CFXUsers[$event->getPlayer()->getName()];
-                $event->setMessage($color . $event->getMessage());
-            }
-        }
-    }
+	public function onChat(PlayerChatEvent $event)
+	{
+		if (isset($this->getPlugin()->CFXUsers[$event->getPlayer()->getName()])) {
+			$fx = $this->getPlugin()->CFXUsers[$event->getPlayer()->getName()] ?? null;
+			if ($fx !== null) {
+				$event->setMessage($fx->formatText($event->getPlayer(), $event->getMessage()));
+			}
+		}
+	}
 }
