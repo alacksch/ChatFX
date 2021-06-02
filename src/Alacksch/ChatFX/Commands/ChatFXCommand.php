@@ -33,19 +33,19 @@ class ChatFXCommand extends Command
 
 	public function MainForm(Player $player)
 	{
-		$form = new CustomForm(function (Player $player, $data) {
+		$effects = [];
+		foreach ($this->getPlugin()->effects as $fx) $effects[] = $fx->getDisplay();
+		$form = new CustomForm(function (Player $player, $data) use ($effects) {
 			if ($data === null) {
 				return true;
 			}
-			$effect = $this->getPlugin()->getEffectByDisplay($data[1]);
+			$effect = $this->getPlugin()->getEffectByDisplay($effects[$data[1]]);
 			$this->getPlugin()->CFXUsers[$player->getName()] = $effect;
 			$player->sendMessage(TextFormat::YELLOW . 'Your chat effect has been set to ' . $effect->getDisplay());
 			return true;
 		});
 		$form->setTitle('§cChat§eFX settings');
 		$form->addLabel('You may use "White" to reset your chat color to default.');
-		$effects = [];
-		foreach ($this->getPlugin()->effects as $id => $fx) $effects[$id] = $fx->getDisplay();
 		$form->addDropdown('Effects', $effects);
 		$player->sendForm($form);
 	}

@@ -5,7 +5,6 @@ declare(strict_types=1);
 namespace Alacksch\ChatFX\fx;
 
 use pocketmine\utils\TextFormat;
-use pocketmine\Player;
 
 //Bounces between colors
 class PingPong extends FX
@@ -23,27 +22,24 @@ class PingPong extends FX
 	public function formatText(Player $player, string $string): string
 	{
 		$message = TextFormat::RESET;
-		$strSplit = str_split($string, 2);//TODO second parameter for split slider
+		$strSplit = str_split($string);//TODO second parameter for split slider
 		$index = 0;
 		// True = right, False = left
-		$direction = true;
+		$direction = false;
 		foreach ($strSplit as $i => $letter) {
 			if ($letter === ' ') {
-				$string .= $letter;
+				$message .= $letter;
 			} else {
-				if ($direction) {
-					$index++;
-					if ($index >= count($this->colors)) {
-						$direction = false;
-					}
-				} else {
-					$index--;
-					if ($index <= 0) {
-						$direction = true;
-					}
+				if ($index >= (count($this->colors) - 1) || $index <= 0) {
+					$direction = !$direction;
 				}
 				$color = $this->colors[$index];
-				$string .= $color . $letter;
+				$message .= $color . $letter;
+				if ($direction) {
+					$index++;
+				} else {
+					$index--;
+				}
 			}
 		}
 		return $message;

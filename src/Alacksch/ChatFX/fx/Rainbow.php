@@ -34,10 +34,10 @@ class Rainbow extends FX
 		$strSplit = str_split($string);//TODO second parameter for split slider
 		foreach ($strSplit as $i => $letter) {
 			if ($letter === ' ') {
-				$string .= $letter;
+				$message .= $letter;
 			} else {
 				$color = self::COLORS[$i % count(self::COLORS)];
-				$string .= $color . $letter;
+				$message .= $color . $letter;
 			}
 		}
 		return $message;

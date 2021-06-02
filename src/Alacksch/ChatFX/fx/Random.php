@@ -26,10 +26,10 @@ class Random extends FX
 		$strSplit = str_split($string);//TODO second parameter for split slider
 		foreach ($strSplit as $i => $letter) {
 			if ($letter === ' ') {
-				$string .= $letter;
+				$message .= $letter;
 			} else {
 				$color = $this->colors[array_rand($this->colors)];
-				$string .= $color . $letter;
+				$message .= $color . $letter;
 			}
 		}
 		return $message;
