@@ -40,9 +40,8 @@ class ChatFX extends PluginBase
 		$this->register(new Color('lightpurple', '§dLight Purple', TextFormat::LIGHT_PURPLE));
 		$this->register(new Color('yellow', '§eYellow', TextFormat::YELLOW));
 		$this->register(new Rainbow('rainbow', '§cR§e§ba§6i§an§db§co§6w'));
-		$this->register(new PingPong('pingpong test', '§cPi§ang§6Po§ang §cTe§ast', TextFormat::RED, TextFormat::GREEN, TextFormat::GOLD));
-		$this->register(new PingPong('pingpong germany', '§0Pi§cng§6Po§cng §0Ge§crm§0an§cy', TextFormat::BLACK, TextFormat::RED, TextFormat::GOLD));
-		$this->register(new Random('random test', '§5R§da§5nd§do§5m §dT§5e§ds§5t', TextFormat::LIGHT_PURPLE, TextFormat::DARK_PURPLE));
+		$this->register(new PingPong('pingpong', '§cPi§ang§6Po§ang §cTe§ast', TextFormat::RED, TextFormat::GREEN, TextFormat::GOLD));
+		$this->register(new PingPong('germany', '§0Pi§cng§6Po§cng §0Ge§crm§0an§cy', TextFormat::BLACK, TextFormat::RED, TextFormat::GOLD));
 	}
 
 	public function onEnable(): void
