@@ -7,7 +7,6 @@ use Alacksch\ChatFX\ChatFX;
 use jojoe77777\FormAPI\CustomForm;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
-use pocketmine\plugin\Plugin;
 use pocketmine\utils\TextFormat;
 use pocketmine\Player;
 
@@ -34,7 +33,7 @@ class ChatFXCommand extends Command
 	public function MainForm(Player $player)
 	{
 		$effects = [];
-		foreach ($this->getPlugin()->effects as $fx) $effects[] = $fx->getDisplay();
+		foreach ($this->getPlugin()->effects as $fx) if ($fx->canUse($player)) $effects[] = $fx->getDisplay();
 		$form = new CustomForm(function (Player $player, $data) use ($effects) {
 			if ($data === null) {
 				return true;
