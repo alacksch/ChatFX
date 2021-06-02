@@ -6,7 +6,7 @@ ChatFX is a plugin for Pocketmine-MP to let players who are given the permission
 ## Usage
 
 - Main command is /cfx OR /chatfx
-- Permission required for the plugin command is chatfx.cfx for the UI and to get colors, you may use chatfx.cfx.COLORNAMEHERE, for example; chatfx.cfx.white for White and for colors with spaces in them, you may use chatfx.cfx.darkred, and you should be good.
+- Permission required for the plugin command is chatfx.cfx for the UI and to get colors, you may use chatfx.cfx.COLORNAMEHERE, for example; chatfx.cfx.white for White and for colors with spaces in them, you may use chatfx.cfx.darkred and permissions like that, just consider removing the space in the name and the caps and you should be good.
 - It also stores the color you pick until the server either restarts or you set it back to white!
 
 ## Contributing
@@ -30,6 +30,8 @@ You may open issues with suggestions, I also appreciate feedback on the project,
 - Light Purple
 - Yellow
 - Rainbow (Implemented :eyes:!)
+- GERMANYYYYYYYYYYY (chatfx.cfx.germany)
+- Pingpong (chatfx.cfx.pingpong)
 
 ## What the plugin does in pictures
 ![Image](https://i.imgur.com/I9z5mZ7_d.webp?maxwidth=760&fidelity=grand)
