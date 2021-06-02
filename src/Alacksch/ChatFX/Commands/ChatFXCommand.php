@@ -83,6 +83,7 @@ class ChatFXCommand extends PluginCommand {
     public function execute(CommandSender $sender, string $commandLabel, array $args): bool {
         if (!$sender->hasPermission($this->getPermission())) {
             $sender->sendMessage("§cYou do not have permissions to run this command.");
+            return true;
         }
         if (!$sender instanceof Player) {
             $sender->sendMessage("§cPlease run the command in-game.");

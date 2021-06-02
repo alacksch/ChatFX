@@ -1,8 +1,11 @@
 ---
 name: ChatFX
-version: 0.0.1
+version: 0.0.2
 main: Alacksch\ChatFX\ChatFX
 api: 3.19.0
 extensions:
   Core: '>=7.4'
+permissions:
+  chatfx.cfx:
+    default: false
 ...
