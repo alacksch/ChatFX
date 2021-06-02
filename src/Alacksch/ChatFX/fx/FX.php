@@ -31,12 +31,12 @@ abstract class FX
 
 	final public function getPermission(): string
 	{
-		return 'chatfx.fx.' . $this->getId();
+		return 'chatfx.cfx.' . $this->getId();
 	}
 
 	final public function canUse(Player $player): bool
 	{
-		return $player->hasPermission($this->getPermission());
+		return $player->hasPermission($this->getPermission()) || $player->hasPermission('chatfx.cfx.*');
 	}
 
 }
