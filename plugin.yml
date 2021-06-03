@@ -3,8 +3,9 @@ name: ChatFX
 version: 1.1.0
 main: Alacksch\ChatFX\ChatFX
 api: 3.19.0
-php: [7.4, 8.0]
 authors: [ 'Alacksch' ]
+extensions:
+   Core: '>=7.3'
 permissions:
   chatfx.cfx:
     default: true
