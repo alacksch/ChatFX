@@ -9,7 +9,6 @@ use Alacksch\ChatFX\fx\Color;
 use Alacksch\ChatFX\fx\FX;
 use Alacksch\ChatFX\fx\PingPong;
 use Alacksch\ChatFX\fx\Rainbow;
-use Alacksch\ChatFX\fx\Random;
 use InvalidArgumentException;
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\TextFormat;
