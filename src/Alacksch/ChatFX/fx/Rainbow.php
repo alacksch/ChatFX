@@ -11,15 +11,7 @@ class Rainbow extends FX
 {
 	private const COLORS = [
 		TextFormat::WHITE,
-		TextFormat::BLACK,
-		TextFormat::DARK_BLUE,
-		TextFormat::DARK_GREEN,
-		TextFormat::DARK_AQUA,
-		TextFormat::DARK_RED,
-		TextFormat::DARK_PURPLE,
 		TextFormat::GOLD,
-		TextFormat::GRAY,
-		TextFormat::DARK_GRAY,
 		TextFormat::BLUE,
 		TextFormat::GREEN,
 		TextFormat::AQUA,
