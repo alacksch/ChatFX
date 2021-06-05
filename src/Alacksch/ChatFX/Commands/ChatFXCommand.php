@@ -13,10 +13,10 @@ use pocketmine\Player;
 
 class ChatFXCommand extends PluginCommand
 {
-    /** @var ChatFX */
+    /** @var ChatFX|Plugin */
     public Plugin $plugin;
 
-    public function __construct(Plugin $plugin) {
+    public function __construct(ChatFX $plugin) {
         $this->plugin = $plugin;
         parent::__construct("cfx", $plugin);
         $this->setPermission("chatfx.cfx");
@@ -25,7 +25,7 @@ class ChatFXCommand extends PluginCommand
     }
 
     /**
-     * @return ChatFX
+     * @return ChatFX|Plugin
      */
     public function getPlugin(): Plugin
     {
