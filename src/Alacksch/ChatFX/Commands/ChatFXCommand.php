@@ -7,15 +7,14 @@ use Alacksch\ChatFX\ChatFX;
 use jojoe77777\FormAPI\CustomForm;
 use pocketmine\command\CommandSender;
 use pocketmine\command\PluginCommand;
-use pocketmine\command\PluginIdentifiableCommand;
 use pocketmine\plugin\Plugin;
 use pocketmine\utils\TextFormat;
 use pocketmine\Player;
 
-class ChatFXCommand extends PluginCommand implements PluginIdentifiableCommand
+class ChatFXCommand extends PluginCommand
 {
     /** @var ChatFX */
-    public ChatFX $plugin;
+    public Plugin $plugin;
 
     public function __construct(Plugin $plugin) {
         parent::__construct("cfx", $plugin);
@@ -25,7 +24,7 @@ class ChatFXCommand extends PluginCommand implements PluginIdentifiableCommand
     }
 
     /**
-     * @return ChatFX
+     * @return Plugin
      */
     public function getPlugin(): Plugin
     {
