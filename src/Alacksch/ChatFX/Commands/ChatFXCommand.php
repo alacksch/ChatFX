@@ -27,7 +27,7 @@ class ChatFXCommand extends PluginCommand implements PluginIdentifiableCommand
     /**
      * @return ChatFX
      */
-    public function getPlugin(): ChatFX
+    public function getPlugin(): Plugin
     {
         return $this->plugin;
     }
