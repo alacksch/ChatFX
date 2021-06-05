@@ -34,11 +34,11 @@ class ChatFXCommand extends PluginCommand
     public function MainForm(Player $player)
     {
         $effects = [];
-        foreach ($this->getPlugin()->effects as $fx) if ($fx->canUse($player)) $effects[] = $fx->getDisplay();
+        foreach ($this->plugin->effects as $fx) if ($fx->canUse($player)) $effects[] = $fx->getDisplay();
         $form = new CustomForm(function (Player $player, $data) use ($effects) {
             if($effects != null) {
-                $effect = $this->getPlugin()->getEffectByDisplay($effects[$data[1]]);
-                $this->getPlugin()->CFXUsers[$player->getName()] = $effect;
+                $effect = $this->plugin->getEffectByDisplay($effects[$data[1]]);
+                $this->plugin->CFXUsers[$player->getName()] = $effect;
                 $player->sendMessage(TextFormat::YELLOW . 'Your chat effect has been set to ' . $effect->getDisplay());
             }
             return true;
