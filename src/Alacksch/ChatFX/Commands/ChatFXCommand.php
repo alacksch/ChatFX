@@ -7,10 +7,11 @@ use Alacksch\ChatFX\ChatFX;
 use jojoe77777\FormAPI\CustomForm;
 use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
+use pocketmine\command\PluginIdentifiableCommand;
 use pocketmine\utils\TextFormat;
 use pocketmine\Player;
 
-class ChatFXCommand extends Command
+class ChatFXCommand extends Command implements PluginIdentifiableCommand
 {
     /** @var ChatFX */
     public ChatFX $plugin;
