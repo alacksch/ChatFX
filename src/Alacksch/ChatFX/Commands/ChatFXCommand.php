@@ -5,22 +5,23 @@ namespace Alacksch\ChatFX\Commands;
 
 use Alacksch\ChatFX\ChatFX;
 use jojoe77777\FormAPI\CustomForm;
-use pocketmine\command\Command;
 use pocketmine\command\CommandSender;
+use pocketmine\command\PluginCommand;
 use pocketmine\command\PluginIdentifiableCommand;
+use pocketmine\plugin\Plugin;
 use pocketmine\utils\TextFormat;
 use pocketmine\Player;
 
-class ChatFXCommand extends Command implements PluginIdentifiableCommand
+class ChatFXCommand extends PluginCommand implements PluginIdentifiableCommand
 {
     /** @var ChatFX */
     public ChatFX $plugin;
 
-    public function __construct(ChatFX $plugin)
-    {
-        $this->plugin = $plugin;
-        parent::__construct("cfx", "ChatFX command!", null, ["chatfx"]);
+    public function __construct(Plugin $plugin) {
+        parent::__construct("cfx", $plugin);
         $this->setPermission("chatfx.cfx");
+        $this->setDescription("ChatFX command!");
+        $this->setAliases(["chatfx"]);
     }
 
     /**
