@@ -17,6 +17,7 @@ class ChatFXCommand extends PluginCommand
     public Plugin $plugin;
 
     public function __construct(Plugin $plugin) {
+        $this->plugin = $plugin;
         parent::__construct("cfx", $plugin);
         $this->setPermission("chatfx.cfx");
         $this->setDescription("ChatFX command!");
@@ -26,7 +27,7 @@ class ChatFXCommand extends PluginCommand
     /**
      * @return ChatFX
      */
-    public function getPlugin(): ChatFX
+    public function getPlugin(): Plugin
     {
         return $this->plugin;
     }
