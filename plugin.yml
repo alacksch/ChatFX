@@ -5,7 +5,7 @@ main: Alacksch\ChatFX\ChatFX
 api: 3.19.0
 authors: [ 'Alacksch' ]
 extensions:
-   Core: '>=7.3'
+   Core: '>=7.4'
 permissions:
   chatfx.cfx:
     default: true
