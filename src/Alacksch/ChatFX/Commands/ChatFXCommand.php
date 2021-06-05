@@ -24,7 +24,7 @@ class ChatFXCommand extends PluginCommand
     }
 
     /**
-     * @return Plugin
+     * @return ChatFX
      */
     public function getPlugin(): Plugin
     {
