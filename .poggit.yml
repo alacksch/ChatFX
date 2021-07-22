@@ -6,6 +6,6 @@ projects:
   ChatFX:
     path: ""
     libs:
-      - src: jojoe77777/FormAPI/libFormAPI
+      - src: Vecnavium/FormAPI/libFormAPI
         version: ^1.3
 ...
