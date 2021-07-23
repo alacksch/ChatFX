@@ -4,7 +4,7 @@ declare(strict_types=1);
 
 namespace Alacksch\ChatFX\fx;
 
-use pocketmine\Player;
+use pocketmine\player\Player;
 use pocketmine\utils\TextFormat;
 
 //Bounces between colors
