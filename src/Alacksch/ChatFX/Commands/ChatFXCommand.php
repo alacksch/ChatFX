@@ -6,22 +6,21 @@ namespace Alacksch\ChatFX\Commands;
 use Alacksch\ChatFX\ChatFX;
 use jojoe77777\FormAPI\CustomForm;
 use pocketmine\command\CommandSender;
-use pocketmine\command\PluginCommand;
+use pocketmine\command\defaults\VanillaCommand;
 use pocketmine\plugin\Plugin;
 use pocketmine\utils\TextFormat;
-use pocketmine\Player;
+use pocketmine\player\Player;
 
-class ChatFXCommand extends PluginCommand
+class ChatFXCommand extends VanillaCommand
 {
     /** @var ChatFX */
     public ChatFX $plugin;
 
-    public function __construct(ChatFX $plugin) {
-        $this->plugin = $plugin;
-        parent::__construct("cfx", $plugin);
+    public function __construct(ChatFX $plugin)
+    {
+        parent::__construct("chatfx", "Customize your chat format", "/chatfx", ["cfx"]);
         $this->setPermission("chatfx.cfx");
-        $this->setDescription("ChatFX command!");
-        $this->setAliases(["chatfx"]);
+        $this->plugin = $plugin;
     }
 
     /**
@@ -34,7 +33,7 @@ class ChatFXCommand extends PluginCommand
     public function MainForm(Player $player)
     {
         $effects = [];
-        foreach ($this->plugin->effects as $fx) if ($fx->canUse($player)) $effects[] = $fx->getDisplay();
+        foreach ($this->plugin->effects as $fx) $effects[] = $fx->getDisplay();
         $form = new CustomForm(function (Player $player, $data) use ($effects) {
             if($effects != null) {
                 $effect = $this->plugin->getEffectByDisplay($effects[$data[1]]);
