@@ -33,7 +33,7 @@ class ChatFXCommand extends VanillaCommand
     public function MainForm(Player $player)
     {
         $effects = [];
-        foreach ($this->plugin->effects as $fx) $effects[] = $fx->getDisplay();
+        foreach ($this->plugin->effects as $fx) if ($fx->canUse($player)) $effects[] = $fx->getDisplay();
         $form = new CustomForm(function (Player $player, $data) use ($effects) {
             if($effects != null) {
                 $effect = $this->plugin->getEffectByDisplay($effects[$data[1]]);
