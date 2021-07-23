@@ -1,11 +1,11 @@
 --- # Poggit-CI Manifest. Open the CI at https://poggit.pmmp.io/ci/AlecksWasHere/NicknameManager
 build-by-default: true
 branches:
-  - main
+  - PM4
 projects:
   ChatFX:
     path: ""
     libs:
-      - src: jojoe77777/FormAPI/libFormAPI
+      - src: Vecnavium/FormAPI/libFormAPI
         version: ^1.3
 ...

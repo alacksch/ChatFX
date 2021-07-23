@@ -5,7 +5,7 @@ declare(strict_types=1);
 namespace Alacksch\ChatFX\fx;
 
 use pocketmine\utils\TextFormat;
-use pocketmine\Player;
+use pocketmine\player\Player;
 
 class Rainbow extends FX
 {
