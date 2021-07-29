@@ -4,23 +4,24 @@ declare(strict_types=1);
 namespace Alacksch\ChatFX\Commands;
 
 use Alacksch\ChatFX\ChatFX;
-use jojoe77777\FormAPI\CustomForm;
+use Vecnavium\FormsUI\CustomForm;
 use pocketmine\command\CommandSender;
-use pocketmine\command\defaults\VanillaCommand;
+use pocketmine\command\PluginCommand;
 use pocketmine\plugin\Plugin;
 use pocketmine\utils\TextFormat;
-use pocketmine\player\Player;
+use pocketmine\Player;
 
-class ChatFXCommand extends VanillaCommand
+class ChatFXCommand extends PluginCommand
 {
     /** @var ChatFX */
     public ChatFX $plugin;
 
-    public function __construct(ChatFX $plugin)
-    {
-        parent::__construct("chatfx", "Customize your chat format", "/chatfx", ["cfx"]);
-        $this->setPermission("chatfx.cfx");
+    public function __construct(ChatFX $plugin) {
         $this->plugin = $plugin;
+        parent::__construct("cfx", $plugin);
+        $this->setPermission("chatfx.cfx");
+        $this->setDescription("ChatFX command!");
+        $this->setAliases(["chatfx"]);
     }
 
     /**
