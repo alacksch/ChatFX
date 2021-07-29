@@ -6,6 +6,6 @@ projects:
   ChatFX:
     path: ""
     libs:
-      - src: Vecnavium/FormsUI/libFormsUI
+      - src: Vecnavium/FormsUI/FormsUI
         version: ^1.0.0 
 ...
