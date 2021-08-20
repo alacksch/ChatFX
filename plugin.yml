@@ -1,9 +1,9 @@
 ---
 name: ChatFX
 version: 1.1.0
-main: Alacksch\ChatFX\ChatFX
+main: Seyrxn\ChatFX\ChatFX
 api: 3.19.0
-authors: [ 'Alacksch' ]
+authors: [ 'Seyrxn' ]
 extensions:
    Core: '>=7.4'
 permissions:
