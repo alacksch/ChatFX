@@ -16,7 +16,7 @@ use Alacksch\ChatFX\FX\Rainbow;
 class ChatFX extends PluginBase {
     private static ChatFX $instance;
     public array $colors = [];
-    public array $CFXUsers;
+    public array $CFXUsers = [];
 
     public function onLoad(): void {
         $this->register(new Color('white', '§fWhite', TextFormat::WHITE));
@@ -40,7 +40,7 @@ class ChatFX extends PluginBase {
     }
     public function onEnable(): void {
         $this->getServer()->getPluginManager()->registerEvents(new ChatListener(), $this);
-        Server::getInstance()->getCommandMap()->register("chatfx", new ChatFXCommand());
+        Server::getInstance()->getCommandMap()->register("chatfx", new ChatFXCommand($this));
     }
     public static function getInstance(): ChatFX {
         return self::$instance;
