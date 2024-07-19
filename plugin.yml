@@ -1,12 +1,13 @@
 ---
 name: ChatFX
-version: 1.1.0
-main: Seyrxn\ChatFX\ChatFX
-api: 3.19.0
-authors: [ 'Seyrxn' ]
-extensions:
-   Core: '>=7.4'
+version: 0.0.1
+main: Alacksch\ChatFX\ChatFX
+api: 5.17.0
+src-namespace-prefix: Alacksch\ChatFX
+depend:
+  - forms
 permissions:
+  chatfx.cmd:
+    default: true
   chatfx.cfx:
     default: true
-...
