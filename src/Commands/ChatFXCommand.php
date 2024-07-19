@@ -24,7 +24,7 @@ class ChatFXCommand extends Command implements PluginOwned {
         } else {
             $colors = [];
 
-            foreach ($this->getOwningPlugin()->colors as $fx) {
+            foreach ($this->getOwningPlugin()->$colors as $fx) {
                  if ($fx->canUse($sender)) {
                      $colors[] = $fx->getDisplay();
                  }
