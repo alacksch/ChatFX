@@ -9,7 +9,7 @@ use Alacksch\ChatFX\FX\FX;
 use InvalidArgumentException;
 use pocketmine\plugin\PluginBase;
 use pocketmine\Server;
-use Alacksch\ChatFX\commands\ChatFXCommand;
+use Alacksch\ChatFX\Commands\ChatFXCommand;
 use pocketmine\utils\TextFormat;
 use Alacksch\ChatFX\FX\Rainbow;
 
