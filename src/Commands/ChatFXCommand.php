@@ -23,6 +23,7 @@ class ChatFXCommand extends Command implements PluginOwned {
         if (!$sender instanceof Player) {
             $sender->sendMessage("Use this command in-game");
         } else {
+            $colors = [];
             foreach ($this->chatFX->colors as $fx) {
                  if ($fx->canUse($sender)) {
                      $colors[] = $fx->getDisplay();
