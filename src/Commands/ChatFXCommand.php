@@ -13,8 +13,10 @@ use pocketmine\plugin\Plugin;
 use pocketmine\plugin\PluginOwned;
 
 class ChatFXCommand extends Command implements PluginOwned {
-    private ChatFX $chatFX;
-    public function __construct() {
+    private $chatfx;
+
+    public function __construct(ChatFX $chatFX) {
+        $this->chatfx = $chatFX;
         parent::__construct("chatfx", "Change your messages color", "", ["cfx"]);
         $this->setPermission("chatfx.cmd");
         $this->setPermissionMessage("You do not have the permission to run this command!");
@@ -24,7 +26,7 @@ class ChatFXCommand extends Command implements PluginOwned {
             $sender->sendMessage("Use this command in-game");
         } else {
             $colors = [];
-            foreach ($this->chatFX->colors as $fx) {
+            foreach ($this->chatfx->colors as $fx) {
                  if ($fx->canUse($sender)) {
                      $colors[] = $fx->getDisplay();
                  }
@@ -34,11 +36,11 @@ class ChatFXCommand extends Command implements PluginOwned {
             ], function(Player $player, CustomFormResponse $response) : void{
                 $dropdown = $response->getDropdown();
                 $player->sendMessage("Your chat color has been changed to: " . $dropdown->getSelectedOption());
-                $this->chatFX->CFXUsers[$player->getName()] = $this->chatFX->getEffectByDisplay($dropdown->getSelectedOption());
+                $this->chatfx->CFXUsers[$player->getName()] = $this->chatfx->getEffectByDisplay($dropdown->getSelectedOption());
             }));
         }
     }
     public function getOwningPlugin(): Plugin {
-        return $this->chatFX;
+        return ChatFX::getInstance();
     }
 }
