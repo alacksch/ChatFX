@@ -1,11 +1,1 @@
----
-build-by-default: true
-branches:
-  - main
-projects:
-  ChatFX:
-    path: ""
-    libs:
-      - src: jojoe77777/FormAPI/libFormAPI
-        version: ^1.3
-...
+
